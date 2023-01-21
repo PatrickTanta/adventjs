@@ -2,7 +2,7 @@
 import { describe, expect, it } from 'vitest'
 import { wrapping } from '../challenges/problem-1'
 
-describe('function to automate gift wrapping', () => {
+describe('problem-1', () => {
     it('should wrap all gifts with *', () => {
         const gifts = ['cat', 'game', 'socks']
         const wrappedGifts = wrapping(gifts)
