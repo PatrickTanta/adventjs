@@ -1,15 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { checkJump } from '../challenges/problem-9'
+import { countTime } from '../challenges/problem-9'
 
 describe('problem-8', () => {
-    it('should return if sleight make a parabola', () => {
-        expect(checkJump([1, 3, 8, 5, 2])).toEqual(true)
-        expect(checkJump([1, 7, 3, 5])).toEqual(false)
-        expect(checkJump([1, 7, 3, 10])).toEqual(false)
-        expect(checkJump([1, 3, 8, 5, 2, 1, 0])).toEqual(true)
-        expect(checkJump([1, 18, 8, 5, 2, 1, 0])).toEqual(true)
-        expect(checkJump([1, 18, 8, 20, 2, 1, 0])).toEqual(false)
-        expect(checkJump([2, 2, 2, 2])).toEqual(false)
-        expect(checkJump([1, 2, 3])).toEqual(false)
+    it('should return how many seconds it takes for all the leds to turn on', () => {
+        const leds = [0, 1, 1, 0, 1]
+
+        expect(countTime(leds)).toEqual(7)
+        expect(countTime([0, 0, 0, 1])).toEqual(21)
+        expect(countTime([0, 0, 1, 0, 0])).toEqual(28)
     })
 })

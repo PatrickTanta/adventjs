@@ -1,12 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { countTime } from '../challenges/problem-8'
+import { checkPart } from '../challenges/problem-8'
 
 describe('problem-8', () => {
-    it('should return how many seconds it takes for all the leds to turn on', () => {
-        const leds = [0, 1, 1, 0, 1]
+    it('should return true if the part can be a palindrome after removing, at most, one character.', () => {
+        // "uwu" is a palindrome without removing any character
+        expect(checkPart("uwu")).toBe(true) // true
 
-        expect(countTime(leds)).toEqual(7)
-        expect(countTime([0, 0, 0, 1])).toEqual(21)
-        expect(countTime([0, 0, 1, 0, 0])).toEqual(28)
+        // "miidim" can be a palindrome after removing the first "i"
+        expect(checkPart("miidim")).toBe(true) // true
+
+        expect(checkPart("midu")).toBe(false)
     })
 })
