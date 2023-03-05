@@ -1,6 +1,4 @@
 
-
-
 export const getCompleted = (part, total) =>  {
     const [h1, m1, s1] = part.split(':')
     const [h2, m2, s2] = total.split(':')
